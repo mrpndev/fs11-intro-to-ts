@@ -274,3 +274,38 @@ console.log(germany)
 // Error - not allowed interface can only define single values
 type PromiseInterface = "pending" | "approved" | "rejected"
 // Type can be union (here), primitive, tuple, or an object
+
+/* 
+	? Union Types
+	* used when a value can be two possible types
+	* ex: a function returning a number or a boolean
+	* denoted using pipe symbol |
+	* kinda like an OR for data types
+	
+	? Type Narrowing
+*/
+
+let userId: number | boolean = false
+
+userId = 256
+
+userId = false
+
+// userId = "string" // Error
+
+function printUserId(id: number | boolean): void {
+	// console.log(id.toFixed(2))
+	// ? throws an error because method is for number but not for boolean
+	
+	if (typeof id === "number") {
+		console.log(id.toFixed(2))
+	} else {
+		console.log(Number(id))
+	}
+}
+
+printUserId(false)
+
+
+
+
