@@ -1,0 +1,22 @@
+{
+	"compilerOptions": {
+		"target": "es2020",
+		// which version of JS to generate
+		"module": "commonjs",
+		// which type of import/export module to use
+		"rootDir": "./src",
+		// where our .ts files will reside
+		"outDir": "./dist",
+		// where our generated .js files will reside
+		"strict": true,
+		// use of strict type checking rules (ex: no global variables)
+		"esModuleInterop": true,
+		// help with non CommonJS modules if they're used
+		"skipLibCheck": true,
+		//  do not type check dependency code
+		"noEmitOnError": true,
+		// do not create a file if it failed compiling
+	},
+	"include": ["src"]
+	// include src files from src directory
+}
